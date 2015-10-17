@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css"/>
+</head>
+<body ng-app="crossoverApp">
+
+<div class="content">
+  <div class="list" ng-controller="ListCtrl">
+
+    <div class="header">
+      <div class="header__changelist">Changelist / Build</div>
+      <div class="header__owner">Owner</div>
+      <div class="header__time">Time Started</div>
+      <div class="header__state">State</div>
+      <div class="header__metrics">Metrics</div>
+      <div class="header__build">Build</div>
+      <div class="header__unit-test">Unit Test</div>
+      <div class="header__functional-test">Functional Test</div>
+    </div>
+
+    <div data-ng-repeat="item in list">
+      <item ng-attr-data="item" ></item>
+    </div>
+
+  </div>
+</div>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/nvd3/build/nv.d3.js"></script>
+<script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/pie.js"></script>
+<script src="scripts/controllers/list.js"></script>
+<script src="scripts/directives/item.js"></script>
+<script src="scripts/directives/progress.js"></script>
+<script src="scripts/directives/metrics-widget.js"></script>
+<script src="scripts/directives/build-widget.js"></script>
+<script src="scripts/directives/test-widget.js"></script>
+
+<script src="scripts/directives/result.js"></script>
+<!-- endbuild -->
+
+<script>
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="item item--{{data.status}}" ng-class="{'item--expanded': expanded}">
+  <div ng-click="expandedToggle()"  class="item__bookmark-container">
+    <div class="item__icon item__icon--{{data.type}}"></div>
+    <div class="item__changelist" ng-bind="data.changelist"></div>
+    <div class="item__owner" ng-bind="data.owner"></div>
+    <div class="item__time" ng-bind="data.timeStarted | date:'M/d/yyyy h:mma' | lowercase"></div>
+    <div class="item__state" ng-bind="data.state"></div>
+    <div class="item__metrics" ng-hide="expanded">
+      <progresss ng-attr-status="data.metrics.status" ng-attr-value="data.metrics.percentage"></progresss>
+    </div>
+    <div class="item__build" ng-hide="expanded">
+      <progresss ng-attr-status="data.build.status" ng-attr-value="data.build.percentage"></progresss>
+    </div>
+    <div class="item__unit-test" ng-hide="expanded">
+      <progresss ng-attr-status="data.unitTest.status" ng-attr-value="data.unitTest.percentage"></progresss>
+    </div>
+    <div class="item__functional-test" ng-hide="expanded">
+      <progresss ng-attr-status="data.functionalTest.status" ng-attr-value="data.functionalTest.percentage"></progresss>
+    </div>
+  </div>
+  <div class="widgets">
+    <metrics-widget ng-attr-data="data.metrics"></metrics-widget>
+    <build-widget ng-attr-data="data.build"></build-widget>
+    <test-widget ng-attr-title="Unit Test" ng-attr-data="data.unitTest"></test-widget>
+    <test-widget ng-attr-title="Functional Test" ng-attr-data="data.functionalTest"></test-widget>
+    <result ng-attr-data="data.result"></result>
+  </div>
+</div>

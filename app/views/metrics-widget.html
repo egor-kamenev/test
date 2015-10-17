@@ -1,0 +1,27 @@
+<div ng-click="showInfo=!showInfo" class="widget widget--{{data.status}}">
+  <div class="widget__title widget__title--{{data.status}}">Metrics</div>
+  <div class="indicator-mectrics">
+    <div ng-bind="data.widget.test.value" class="indicator-mectrics__arrow indicator-mectrics__arrow--vertical--{{data.widget.test.status}}">
+    </div>
+    <div class="indicator-mectrics__name">Test</div>
+  </div>
+  <div class="indicator-mectrics">
+    <div ng-bind="data.widget.mantainability.value" class="indicator-mectrics__arrow indicator-mectrics__arrow--vertical--{{data.widget.mantainability.status}}">
+    </div>
+    <div class="indicator-mectrics__name">Maintainability</div>
+  </div>
+  <div class="indicator-mectrics">
+    <div ng-bind="data.widget.security.value" class="indicator-mectrics__arrow indicator-mectrics__arrow--horizontal--{{data.widget.security.status}}">
+    </div>
+    <div class="indicator-mectrics__name">Security</div>
+  </div>
+  <div class="indicator-mectrics">
+    <div ng-bind="data.widget.workmanship.value" class="indicator-mectrics__arrow indicator-mectrics__arrow--horizontal--{{data.widget.workmanship.status}}">
+    </div>
+    <div class="indicator-mectrics__name">Workmanship</div>
+  </div>
+  <div ng-show="showInfo" class="info-window">
+    <div class="info-window__close"><a>[Х]</a></div>
+    info
+  </div>
+</div>

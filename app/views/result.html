@@ -1,0 +1,10 @@
+<div class="result">
+  <div class="result__title">Result</div>
+  <div ng-bind="data.statusText" class="result__status result__status--{{data.status}}"></div>
+  <div ng-bind="data.actionText" class="result__action result__action--{{data.status}}"></div>
+  <div class="result__button">
+    <a href="{{data.url}}">
+      <div ng-bind="data.buttonText" class="button button--find"></div>
+    </a>
+  </div>
+</div>

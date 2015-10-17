@@ -1,0 +1,22 @@
+$background-color: white;
+$font-family: Helvetica, Arial, sans-serif;
+
+@mixin opacity-duration-easeinout(){
+  @include transition-property(opacity);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-in-out);
+}
+
+@mixin height-duration-easeinout(){
+  @include transition-property(height);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-in-out);
+}
+
+@mixin item-element(){
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-top: 2px;
+}

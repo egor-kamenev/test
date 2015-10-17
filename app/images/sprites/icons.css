@@ -1,0 +1,69 @@
+/* glue: 0.11.1 hash: 1f18075ae1 */
+        .sprite-icons-1_firewall,
+.sprite-icons-2_computer,
+.sprite-icons-3_arrow_up,
+.sprite-icons-4_arrow_down,
+.sprite-icons-5_arrow_left,
+.sprite-icons-6_arrow_right,
+.sprite-icons-7_computer {
+            background-image: url('icons.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-icons-1_firewall {
+            background-position: 0 0;
+            width: 32px;
+            height: 32px;
+        }
+        
+        .sprite-icons-2_computer {
+            background-position: -32px 0;
+            width: 32px;
+            height: 32px;
+        }
+        
+        .sprite-icons-3_arrow_up {
+            background-position: 0 -32px;
+            width: 54px;
+            height: 54px;
+        }
+        
+        .sprite-icons-4_arrow_down {
+            background-position: -64px 0;
+            width: 54px;
+            height: 54px;
+        }
+        
+        .sprite-icons-5_arrow_left {
+            background-position: -118px 0;
+            width: 54px;
+            height: 54px;
+        }
+        
+        .sprite-icons-6_arrow_right {
+            background-position: 0 -86px;
+            width: 54px;
+            height: 54px;
+        }
+        
+        .sprite-icons-7_computer {
+            background-position: -172px 0;
+            width: 64px;
+            height: 64px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-icons-1_firewall,
+    .sprite-icons-2_computer,
+    .sprite-icons-3_arrow_up,
+    .sprite-icons-4_arrow_down,
+    .sprite-icons-5_arrow_left,
+    .sprite-icons-6_arrow_right,
+    .sprite-icons-7_computer {
+                background-image: url('icons.png');
+                -webkit-background-size: 236px 140px;
+                -moz-background-size: 236px 140px;
+                background-size: 236px 140px;
+            }
+        }
+        

@@ -1,0 +1,32 @@
+<div ng-click="showInfo=!showInfo"  class="widget widget--{{data.status}}">
+  <div ng-bind="title" class="widget__title widget__title--{{data.status}}"></div>
+  <div class="pie-chart">
+    <nvd3-pie-chart
+      data="chartData"
+      x="xFunction()"
+      y="yFunction()"
+      width="210"
+      height="210"
+      showLabels="true"
+      pieLabelsOutside="false"
+      showValues="true"
+      color="colorFunction()">
+      <svg></svg>
+    </nvd3-pie-chart>
+  </div>
+  <div class="passed-info passed-info--{{data.status}}">
+    <div ng-bind="(data.passed / data.total * 100 | number: 0) + '%'" class="passed-info__value"></div>
+    <div class="passed-info__sign">test passed</div>
+  </div>
+
+  <div class="covered-progress">
+    <div class="covered-progress__status" style="width: {{data.covered}}%"></div>
+    <div ng-bind="data.covered + '%'" class="covered-progress__value"></div>
+    <div class="covered-progress__sign">code covered</div>
+  </div>
+  <div ng-show="showInfo" class="info-window">
+    <div class="info-window__close"><a>[Х]</a></div>
+    Test Info
+  </div>
+
+</div>

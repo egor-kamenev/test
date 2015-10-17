@@ -1,0 +1,16 @@
+<div ng-click="showInfo=!showInfo" class="widget widget--{{data.status}}">
+  <div class="widget__title widget__title--{{data.status}}">Build</div>
+  <div class="indicator-build" ng-show="data.debug">
+    <div class="indicator-build__image"></div>
+    <div class="indicator-build__name">Debug</div>
+  </div>
+  <div class="indicator-build" ng-show="data.release">
+    <div class="indicator-build__image"></div>
+    <div class="indicator-build__name">Release</div>
+  </div>
+  <div ng-bind="data.time | date:'h:mma - M/d/yyyy' | lowercase" class="widget__date"></div>
+  <div ng-show="showInfo" class="info-window">
+    <div class="info-window__close"><a>[Х]</a></div>
+    Build Info
+  </div>
+</div>
